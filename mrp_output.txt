@@ -1,0 +1,62 @@
+S:\dev\reinforcement_learning>C:/Users/arrah/AppData/Local/Microsoft/WindowsApps/python3.9.exe s:/dev/reinforcement_learning/mrp.py
+Starting Value Iteration...
+Iteration 1:
+  State 0: Reward = 0.0, Value = 0.0
+  State 1: Reward = -1.2999999999999998, Value = -1.2999999999999998
+  State 2: Reward = 5.6, Value = 5.6
+  State 3: Reward = 0, Value = 0.0
+  New State Values: [ 0.  -1.3  5.6  0. ]
+Iteration 2:
+  State 0: Reward = 0.0, Value = -0.11699999999999998
+  State 1: Reward = -1.2999999999999998, Value = -0.6429999999999998
+  State 2: Reward = 5.6, Value = 5.132
+  State 3: Reward = 0, Value = 0.0
+  New State Values: [-0.117 -0.643  5.132  0.   ]
+Iteration 3:
+  State 0: Reward = 0.0, Value = -0.15263999999999997
+  State 1: Reward = -1.2999999999999998, Value = -0.6024999999999997
+  State 2: Reward = 5.6, Value = 5.368519999999999
+  State 3: Reward = 0, Value = 0.0
+  New State Values: [-0.15264 -0.6025   5.36852  0.     ]
+Iteration 4:
+  State 0: Reward = 0.0, Value = -0.17786339999999995
+  State 1: Reward = -1.2999999999999998, Value = -0.5650293999999997
+  State 2: Reward = 5.6, Value = 5.3831
+  State 3: Reward = 0, Value = 0.0
+  New State Values: [-0.1778634 -0.5650294  5.3831     0.       ]
+Iteration 5:
+  State 0: Reward = 0.0, Value = -0.19492199999999996
+  State 1: Reward = -1.2999999999999998, Value = -0.5636384679999997
+  State 2: Reward = 5.6, Value = 5.396589415999999
+  State 3: Reward = 0, Value = 0.0
+  New State Values: [-0.194922   -0.56363847  5.39658942  0.        ]
+Iteration 6:
+  State 0: Reward = 0.0, Value = -0.20861428211999997
+  State 1: Reward = -1.2999999999999998, Value = -0.5685111914799998
+  State 2: Reward = 5.6, Value = 5.39709015152
+  State 3: Reward = 0, Value = 0.0
+  New State Values: [-0.20861428 -0.56851119  5.39709015  0.        ]
+Iteration 7:
+  State 0: Reward = 0.0, Value = -0.22014357575039997
+  State 1: Reward = -1.2999999999999998, Value = -0.5758982213799998
+  State 2: Reward = 5.6, Value = 5.395335971067199
+  State 3: Reward = 0, Value = 0.0
+  New State Values: [-0.22014358 -0.57589822  5.39533597  0.        ]
+.
+.
+.
+
+Iteration 83:
+  State 0: Reward = 0.0, Value = -0.3059720776669082
+  State 1: Reward = -1.2999999999999998, Value = -0.645951042073053
+  State 2: Reward = 5.6, Value = 5.36745792881229
+  State 3: Reward = 0, Value = 0.0
+  New State Values: [-0.30597208 -0.64595104  5.36745793  0.        ]
+Iteration 84:
+  State 0: Reward = 0.0, Value = -0.3059729766967704
+  State 1: Reward = -1.2999999999999998, Value = -0.6459517891236205
+  State 2: Reward = 5.6, Value = 5.3674576248537
+  State 3: Reward = 0, Value = 0.0
+  New State Values: [-0.30597298 -0.64595179  5.36745762  0.        ]
+Convergence reached.
+Final State Values: [-0.30597208 -0.64595104  5.36745793  0.        ]

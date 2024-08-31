@@ -1,0 +1,8 @@
+S:\dev\reinforcement_learning>C:/Users/arrah/AppData/Local/Microsoft/WindowsApps/python3.9.exe s:/dev/reinforcement_learning/mdp.py
+Initial State is 1
+From state 1 to 2 with action 0, reward 1
+From state 2 to 2 with action 0, reward 0
+From state 2 to 3 with action 1, reward 1
+From state 3 to 3 with action 1, reward 10
+From state 3 to 1 with action 0, reward 0
+From state 1 to 3 with action 1, reward 10

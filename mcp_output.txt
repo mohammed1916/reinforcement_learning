@@ -1,0 +1,16 @@
+S:\dev\reinforcement_learning>C:/Users/arrah/AppData/Local/Microsoft/WindowsApps/python3.9.exe s:/dev/reinforcement_learning/mcp.py
+
+Transition matrix =  [[0.3 0.7]
+ [0.2 0.8]]
+Steady state probabilities:
+Iter 0: Probability vector S = [0.25 0.75]
+Iter 1: Probability vector S = [0.225 0.775]
+Iter 2: Probability vector S = [0.2225 0.7775]
+Iter 3: Probability vector S = [0.22225 0.77775]
+Iter 4: Probability vector S = [0.222225 0.777775]
+Iter 5: Probability vector S = [0.2222225 0.7777775]
+Iter 6: Probability vector S = [0.22222225 0.77777775]
+Iter 7: Probability vector S = [0.22222223 0.77777778]
+Iter 8: Probability vector S = [0.22222222 0.77777778]
+Iter 9: Probability vector S = [0.22222222 0.77777778]
+Final vector S = [0.22222222 0.77777778]
