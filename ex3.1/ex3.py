@@ -49,7 +49,7 @@ eq4 = Eq((x+y+z), 1)
 print("Equation 4: ", eq4)
 # eq4
 
-solutions = solve([eq1, eq2, eq3, eq4], (x, y, z, 1, 1))
+solutions = solve([eq1, eq2, eq3, eq4], (x, y, z, 1))
 
 
 # [solutions[i][:3] for i in range(len()])

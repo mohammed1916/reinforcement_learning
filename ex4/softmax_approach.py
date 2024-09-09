@@ -1,7 +1,7 @@
 import numpy as np
 
 class SoftmaxBandit:
-    def _init_(self, n_arms, temperature, true_rewards):
+    def __init__(self, n_arms, temperature, true_rewards):
         self.n_arms = n_arms
         self.temperature = temperature  # Temperature parameter for softmax
         self.true_rewards = true_rewards  # True mean rewards for each arm

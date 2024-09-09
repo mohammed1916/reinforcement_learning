@@ -1,7 +1,7 @@
 import numpy as np
 
 class EpsilonGreedyBandit:
-    def _init_(self, n_arms, epsilon, true_rewards):
+    def __init__(self, n_arms, epsilon, true_rewards):
         self.n_arms = n_arms
         self.epsilon = epsilon
         self.true_rewards = true_rewards  # True mean rewards for each arm

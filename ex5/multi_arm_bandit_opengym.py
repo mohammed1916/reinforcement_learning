@@ -5,8 +5,8 @@ from gym import spaces
 
 # Define a custom environment for the multi-armed bandit
 class MultiArmedBanditEnv(gym.Env):
-    def _init_(self, n_arms=10):
-        super(MultiArmedBanditEnv, self)._init_()
+    def __init__(self, n_arms=10):
+        super(MultiArmedBanditEnv, self).__init__()
         self.n_arms = n_arms
         self.action_space = spaces.Discrete(n_arms)  # Each action corresponds to an arm
         self.observation_space = spaces.Discrete(1)  # No meaningful observations
