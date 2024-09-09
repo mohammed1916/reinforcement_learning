@@ -1,0 +1,12 @@
+Step 0: Action 0, Observation [-0.04838955 -0.20220433 -0.0246807   0.2526515 ], Reward 1.0, Done False, Truncated False
+Step 1: Action 0, Observation [-0.05243364 -0.39696532 -0.01962767  0.53744864], Reward 1.0, Done False, Truncated False
+Step 2: Action 0, Observation [-0.06037294 -0.5918059  -0.00887869  0.82388306], Reward 1.0, Done False, Truncated False
+Step 3: Action 1, Observation [-0.07220906 -0.39656362  0.00759897  0.52842087], Reward 1.0, Done False, Truncated False
+.
+.
+.
+Step 17: Action 1, Observation [-0.18088649 -0.4134536   0.18452047  0.9150959 ], Reward 1.0, Done False, Truncated False
+Step 18: Action 0, Observation [-0.18915556 -0.61052686  0.20282239  1.2596294 ], Reward 1.0, Done False, Truncated False
+Step 19: Action 1, Observation [-0.20136611 -0.4184929   0.22801498  1.0367047 ], Reward 1.0, Done True, Truncated False
+Episode finished after 20 timesteps
+
