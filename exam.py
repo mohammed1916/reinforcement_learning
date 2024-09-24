@@ -23,9 +23,10 @@ print(pi)
 
 # res1 =[]
 for i in range(3):
-    pi = np.dot(pi, T)
-    print(pi)
-    # print("After year: {0}. Probability vector S = {1}". format(i,res1))
+    T = np.dot(pi, T)
+    # pi = np.dot(pi, T)
+    # print(pi)
+    print("After year: {0}. Probability vector S = {1}". format(i,pi))
     # T = res1
 
 print("After 3",pi)
