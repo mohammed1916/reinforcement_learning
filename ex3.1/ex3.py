@@ -21,10 +21,19 @@ import numpy as np
 
 from sympy import symbols, Eq, solve
 
-T = np.array([[0.3,0.2,0.5],[0.4,0,0],[0.1,0,0.9]])
+T = np.array([
+    [0.3,0.2,0.5],
+    [0.4,0,0],
+    [0.1,0,0.9]
+    ])
 print("Transition matrix:\n",T)
 
-R = np.array([[-3,-2,0,0],[-2,0,0,10],[-3,0,0,0],[0,0,0,0]])
+R = np.array([
+    [-3,-2,0,0],
+    [-2,0,0,10],
+    [-3,0,0,0],
+    [0,0,0,0]
+    ])
 print("Reward matrix:\n",R)
 
 x,y,z = symbols("x,y,z")
@@ -61,3 +70,11 @@ print("solution 2", [solutions[1][:3]])
 print("solution 3", [solutions[2][:3]])
 
 
+S = np.array(solutions[0][:3])
+
+for i in range(10):
+    res = np.dot(S,T)
+    print("\nIteration {0}. Probability vector S = {1}". format(i,res))
+    S = res
+
+print("\nFinal probability vector = ",S)
