@@ -1,7 +1,6 @@
 import gym
 from gym import spaces
 import numpy as np
-import random
 
 class OneDGridEnv(gym.Env):
     def __init__(self, grid_size=11, goal_state=10):
@@ -30,45 +29,56 @@ class OneDGridEnv(gym.Env):
 
         return self.state, reward, done, {}
 
-    def render(self):
+    def render(self, reward):
         grid = ["_"] * self.grid_size
         grid[self.state] = "A"  # Mark the agent's current position
         grid[self.goal_state] = "G"  # Mark the goal position
-        print(" ".join(grid))
+        print(" ".join(grid), "Reward: ", reward)
 
 # Instantiate the environment
 env = OneDGridEnv()
-# Run a random agent in the environment for 10 episodes
-for episode in range(10):
+# Initialize Q-table
+num_states = env.observation_space.n
+num_actions = env.action_space.n
+Q = np.zeros((num_states, num_actions))
+
+# Hyperparameters
+alpha = 0.1  # Learning rate
+gamma = 0.9  # Discount factor
+epsilon = 0.8  # Exploration rate
+
+# Training loop
+num_episodes = 1000
+for episode in range(num_episodes):
     state = env.reset()
     done = False
 
     while not done:
-        action = env.action_space.sample()  # Choose a random action
+        # print("np.random.uniform()", np.random.uniform())
+        if np.random.uniform() < epsilon:
+            action = env.action_space.sample()  # Explore
+        else:
+            action = np.argmax(Q[state])  # Exploit
+
+        # Take action and observe next state and reward
         next_state, reward, done, _ = env.step(action)
-        env.render()
-        print("Reward: ", reward)
+
+        # Update Q-table
+        Q[state, action] += alpha * (reward + gamma * np.max(Q[next_state]) - Q[state, action])
 
         state = next_state
 
-# # Create a numpy array to store the episode trajectories
-# trajectories = np.zeros((10, env.grid_size))
+# Evaluate the learned policy
+num_eval_episodes = 10
+for episode in range(num_eval_episodes):
+    state = env.reset()
+    done = False
 
-# for episode in range(10):
-#     state = env.reset()
-#     done = False
+    while not done:
+        action = np.argmax(Q[state])
+        state, reward, done, _ = env.step(action)
+        env.render(reward)
 
-#     while not done:
-#         action = env.action_space.sample()  # Choose a random action
-#         next_state, reward, done, _ = env.step(action)
-#         env.render()
-#         print("Reward: ", reward)
+env.close()
 
-#         state = next_state
-
-#         # Update the trajectory array
-#         trajectories[episode, state] = 1
-
-# # Visualize the episode trajectories
-# print("Episode Trajectories:")
-# print(trajectories)
+print(Q)

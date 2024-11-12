@@ -15,6 +15,7 @@ q_table = np.zeros((grid_size, len(actions)))
 
 
 def get_next_state(state, action):
+    # bound checks
     if action == 'left':
         return max(0, state - 1)
     elif action == 'right':
@@ -29,8 +30,10 @@ def get_reward(state):
 
 
 def choose_action(state):
+    # chooses a random action (exploration)
     if random.uniform(0, 1) < epsilon:
         return random.choice(actions)  # exploration
+    # selects the action with the highest Q-value in the current state (exploitation).
     else:
         return actions[np.argmax(q_table[state])]  # exploitation
 
@@ -51,6 +54,7 @@ for episode in range(num_episodes):
 
         # Update Q-value using Q-learning formula
         best_next_action = np.argmax(q_table[next_state])
+        # print("q_table",next_state, q_table[next_state])
         q_table[state, action_index] += alpha * (
                     reward + gamma * q_table[next_state, best_next_action] - q_table[state, action_index])
 
