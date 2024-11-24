@@ -31,3 +31,4 @@ build/
 *.swp
 *.tmp
 .DS_Store
+ex10/data/data/*
