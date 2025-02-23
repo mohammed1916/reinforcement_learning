@@ -13,7 +13,7 @@ def monte_carlo_pi(num_samples):
             inside_circle += 1
 
     # Calculate the approximation of pi
-    pi_approx = 4 * inside_circle / num_samples
+    pi_approx = 4 * (inside_circle / num_samples)
     return pi_approx
 
 # Set the number of samples for the simulation

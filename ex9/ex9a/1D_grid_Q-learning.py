@@ -46,10 +46,11 @@ for episode in range(num_episodes):
     while not done:
         # Choose action based on Q-table
         action = choose_action(state)
-        action_index = actions.index(action)
+        # print("action", action) # left or right
+        action_index = actions.index(action) # 0 or 1
 
         # Take action and observe next state and reward
-        next_state = get_next_state(state, action)
+        next_state = get_next_state(state, action) 
         reward = get_reward(next_state)
 
         # Update Q-value using Q-learning formula
